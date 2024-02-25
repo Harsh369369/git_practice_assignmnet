@@ -1,12 +1,17 @@
 let num = 5;
-console.log(isPrime(num));
-
 
 function isPrime(num) {
-    for(let i = 2; i<Math.sqrt(num); i++){
-        if(num%i == 0){
-            return true;
-        }
+  for (let i = 2; i < num; i++) {
+    if (num % i == 0) {
+      return false;
     }
-    return false;
+  }
+  return true;
+}
+
+let ans = isPrime(num);
+if (ans == true) {
+  console.log(`Yes, ${num} is Prime Number`);
+} else {
+  console.log(`No, ${num} is not a Prime Number`);
 }
